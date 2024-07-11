@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>June_26</title>
+  </head>
+  <body>
+    <script>
+      
+      /*  try{
+            throw "dsag";
+            
+        }
+        catch(eror){
+            alert(eror);
+
+        }
+
+        
+
+      function sum(a, b) {
+        console.log(a + b);
+      }
+
+      try {
+        var result = sum(10, 20);
+        //throw "Error";
+      } catch (error) {
+        console.log("error");
+      } finally {
+        console.log("Finally block executed");
+      }
+        */
+
+      const json = `{"Name":"Aryan"
+         , "age":20,
+         "rollNo":28900}`;
+         console.log(json);
+      const jsonObj = JSON.parse(json);
+      console.log(jsonObj);
+
+      const jsonString = JSON.stringify(jsonObj);
+      console.log(jsonString);
+      
+    </script>
+  </body>
+</html>

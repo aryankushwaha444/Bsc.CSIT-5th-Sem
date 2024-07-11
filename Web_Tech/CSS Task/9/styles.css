@@ -1,0 +1,113 @@
+/* Positioning */
+.static-position {
+    position: static;
+    background-color: lightgray;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.relative-position {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: lightcoral;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.absolute-position {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    background-color: lightgreen;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.fixed-position {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Overflow */
+.overflow-example {
+    width: 200px;
+    height: 100px;
+    overflow:auto;
+    background-color: lightyellow;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Float */
+.float-container {
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.float-left {
+    float: left;
+    width: 45%;
+    background-color: lightpink;
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+.float-right {
+    float: right;
+    width: 45%;
+    background-color: lightcyan;
+    padding: 10px;
+    margin: 10px 5px;
+}
+
+.clear-both {
+    clear: both;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Text Align */
+.text-align-center {
+    text-align: center;
+    background-color: lightsteelblue;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/* Vertical Align */
+.vertical-align-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightseagreen;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.vertical-align-top {
+    align-self: flex-start;
+}
+
+.vertical-align-middle {
+    align-self: center;
+}
+
+.vertical-align-bottom {
+    align-self: flex-end;
+}
+
+/* Centering with Margin */
+.margin-center {
+    width: 50%;
+    margin: 10px auto;
+    background-color: lightcoral;
+    padding: 10px;
+    text-align: center;
+}

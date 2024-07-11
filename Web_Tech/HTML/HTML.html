@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="descriotion" content="Web technology">
+    <meta name="keywords" content="HTML,CSS,JS">
+    <meta http-equiv="refresh">
+    <title>HTML_lab</title>
+
+
+</head>
+
+<body>
+    <!-- Creating Table -->
+     <table style="border: solid 2px;">
+        <thead>
+            <tr>
+                <th colspan="2">Employee Information</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">ID</td>
+                <td>101</td>
+            </tr>
+            <tr>
+                <td>102</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>John Doe</td>
+            </tr>
+            <tr>
+                <td>Department</td>
+                <td>Marketing</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total Employees: 2</td>
+            </tr>
+        </tfoot>
+    </table> 
+
+
+    <!-- Creating Frames -->
+
+    <iframe src="https://www.oic.edu.np" frameborder="0" width="400px" height="400px">Facebook</iframe>
+
+
+    <!-- Creating form -->
+<!-- 
+    <form>
+        <div>
+            Full Name:<input type="text" id="fullname" class="form-input" placeholder="Enter your full name" required>
+        </div>
+
+        <div>
+            Email:<input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+
+        <div>
+            Message:<textarea id="message" class="form-input" placeholder="Enter your message" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Submit</button>
+    </form> -->
+
+    <!-- <audio src="audio.mp3" controls autoplay preload="metadata" >Audio</audio>
+    <video src="./video.mp4" controls  width="400px" poster="./rn.png" loop>Video</video> -->
+
+
+    <header>
+        <h1>This is the Header</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section>
+            <article>
+                <h2>Article Title</h2>
+                <p>This is the content of the article.</p>
+                <figure>
+                    <img src="example.jpg" alt="Example Image">
+                    <figcaption>Caption for the image.</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Related Links</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+<!-- 
+    <h2>Window Events</h2>
+    <p>Resize the window and see the alert:</p>    
+-->
+
+
+    
+    <script>
+        window.onresize = function(event) {
+            alert("Window has been resized!");
+        };
+    </script>
+
+    <h2>Form Element Events</h2>
+    <form>
+        <label for="inputField">Type something:</label>
+        <input type="text" id="inputField" required>
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("submitButton").onclick = function() {
+            alert("Form submitted!");
+        };
+    </script>
+
+    <h2>Keyboard Events</h2>
+    <p>Press any key to see the key code:</p>
+
+    <script>
+        document.onkeydown = function(event) {
+            alert("Key code: " + event.keyCode);
+        };
+    </script>
+
+    <h2>Mouse Events</h2>
+    <button id="mouseButton">Click me!</button>
+
+    <script>
+        document.getElementById("mouseButton").onclick = function(event) {
+            alert("Button clicked at X: " + event.clientX + ", Y: " + event.clientY);
+        };
+    </script>
+
+
+
+
+
+</body>
+</html>

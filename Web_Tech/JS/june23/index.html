@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .c {
+      color: red;
+    }
+  </style>
+  <body>
+    <!-- onsubmit -->
+    <form name="rn">
+      <label for="firstName"> First Name</label>
+      <input type="text" name="firstName" id="firstName" />
+      <div class="firstnameerror c"></div>
+      <br />
+      <label for="lastName"> Last Name</label>
+      <input type="text" name="lastName" id="lastName" />
+      <div class="lastnameerror c"></div>
+      <br />
+      <label for="email"> Email</label>
+      <input type="text" name="email" id="email" />
+      <div class="emailerror c"></div>
+      <br />
+      <label for="phone"> Phone</label>
+      <input type="text" name="phone" id="phone" />
+      <div class="phoneerror c"></div>
+      <br />
+      <!-- submit button -->
+      <button type="submit" class="btnsub">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+
+    
+    <script>
+      document.forms.rn.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const firstName = document.forms.rn.firstName.value;
+        const lastName = document.forms.rn.lastName.value;
+        const email = document.forms.rn.email.value;
+        const phone = document.forms.rn.phone.value;
+
+        //   const resultDiv = document.querySelector(".result");
+        let formData = "";
+        const namePattern = /^[A-Za-z]+$/;
+        const emailPattern =
+          /^([a-zA-Z0-9_\.\-])+\@(([a-zAZ0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        const phonepattern = /^([0-9]{10})$/;
+
+        // Form validation
+        let isValid = true;
+
+        if (firstName === "" || firstName.trim() === "") {
+          document.querySelector(".firstnameerror").textContent =
+            "First Name is required";
+          isValid = false;
+        } else if (firstName.length < 3 || firstName.length > 15) {
+          document.querySelector(".firstnameerror").textContent =
+            "First Name should be between 3 to 15 characters";
+          isValid = false;
+        } else if (!firstName.match(namePattern)) {
+          document.querySelector(".firstnameerror").textContent =
+            "First Name must be  Character";
+          isValid = false;
+        } else {
+          formData += `First Name: ${firstName} <br>`;
+        }
+
+        if (lastName === "" || lastName.trim() === "") {
+          document.querySelector(".lastnameerror").textContent =
+            "Last Name is required";
+          isValid = false;
+        } else if (lastName.length < 3 || lastName.length > 15) {
+          document.querySelector(".lastnameerror").textContent =
+            "Last Name should be between 3 to 15 characters";
+          isValid = false;
+        } else if (!lastName.match(namePattern)) {
+          document.querySelector(".lastnameerror").textContent =
+            "Last Name must be  Character";
+          isValid = false;
+        } else {
+          formData += `Last Name: ${lastName} <br>`;
+        }
+
+        if (email === "" || email.trim() === "") {
+          document.querySelector(".emailerror").textContent =
+            "Email is required";
+          isValid = false;
+        } else if (email.length < 5 || email.length > 32) {
+          document.querySelector(".emailerror").textContent =
+            "Email should be between 5 to 32 characters";
+          isValid = false;
+        } else if (!email.match(emailPattern)) {
+          document.querySelector(".emailerror").textContent =
+            "Please Enter valid Email";
+          isValid = false;
+        } else {
+          formData += `Email: ${email} <br>`;
+        }
+
+        if (phone === "" || phone.trim() === "") {
+          document.querySelector(".phoneerror").textContent =
+            "Phone is required";
+          isValid = false;
+        } else if (phone.length < 10 || phone.length > 13) {
+          document.querySelector(".phoneerror").textContent =
+            "Phone should be between 10 to 13 characters";
+          isValid = false;
+        } else if (!phone.match(phonepattern)) {
+          document.querySelector(".phoneerror").textContent =
+            "Phone must be Number";
+          isValid = false;
+        } else {
+          formData += `Phone: ${phone} <br>`;
+        }
+
+        if (isValid) {
+          document.querySelector(
+            ".firstnameerror"
+          ).textContent = `Your FirstName = ${firstName}`;
+
+          document.querySelector(
+            ".lastnameerror"
+          ).textContent = `Your LastName = ${lastName}`;
+
+          document.querySelector(
+            ".emailerror"
+          ).textContent = `Your Email = ${email}`;
+
+          document.querySelector(
+            ".phoneerror"
+          ).textContent = `Your Phone Number = ${phone}`;
+
+          // resultDiv.innerHTML = formData;
+        }
+
+        // console.log(firstName, lastName, email, phone);
+      });
+    </script>
+  </body>
+</html>

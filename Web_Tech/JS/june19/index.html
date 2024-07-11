@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- onsubmit -->
+    <form name="rn">
+      <label for="firstName"> First Name</label>
+      <input type="text" name="firstName" id="firstName" /> <br />
+      <br />
+      <label for="lastName"> last Name</label>
+      <input type="text" name="lastName" id="lastName" /> <br />
+      <br />
+      <label for="email"> Email</label>
+      <input type="text" name="email" id="email" /> <br />
+      <br />
+      <label for="phone"> phone</label>
+      <input type="text" name="phone" id="phone" /> <br />
+      <br />
+
+      <!-- submit button -->
+      <button type="submit" class="btnsub">submit</button>
+
+      <button type="reset">reset</button>
+    <div class="result"></div>
+    </form>
+    <script>
+      // function formValidation() {
+      // alert("form submitted");
+      //   console.log("form submitted");
+
+      /*  const firstName = document.user.firstName.value;
+        const lastName = document.user.lastName.value;
+        const email = document.email.value;
+        const phone = document.phone.value;  */
+
+      /*
+        const firstName = document.forms["rn"]["firstName"].value;
+        const lastName = document.forms["rn"]["lastName"].value;
+        const email = document.forms["rn"]["email"].value;
+        const phone = document.forms["rn"]["phone"].value; 
+        
+
+        if (
+          firstName != "" &&
+          firstName.trim() != "" &&
+          firstName.length >= 3 &&
+          firstName.length <= 15
+        ) {
+            // alert("first name is valid");
+           console.log("first name is valid");
+        } 
+        else {
+            // alert(" first name is not valid");
+           console.log("first name is not valid");
+           
+        }
+
+        if (
+           lastName != "" &&
+          lastName.trim() != "" &&
+          lastName.length >= 3 &&
+          lastName.length <= 15
+        ) {
+            // alert("first name is valid");
+           console.log("last name is valid");
+        } 
+        else {
+            // alert(" first name is not valid");
+           console.log("last name is not valid");
+           
+        }
+
+        if (
+          email != "" &&
+         email.trim() != "" &&
+         email.length >= 5 &&
+         email.length <= 32
+       ) {
+           // alert("first name is valid");
+          console.log("Email  is valid");
+       } 
+       else {
+           // alert(" first name is not valid");
+          console.log("Email is not valid");
+          
+       }
+
+
+       if (
+        phone != "" &&
+       phone.trim() != "" &&
+       phone.length >= 10 &&
+       phone.length <= 13
+     ) {
+         // alert("first name is valid");
+        console.log("Phone  is valid");
+     } 
+     else {
+         // alert(" first name is not valid");
+        console.log("Phone is not valid");
+        
+     }
+      }
+
+      */
+
+      console.log(
+        document.forms.rn.addEventListener("submit", function (e) {
+          e.preventDefault();
+          console.log("Form has been Submitted");
+          const firstName = document.rn.firstName.value;
+          const lastName = document.rn.lastName.value;
+          const email = document.rn.email.value;
+          const phone = document.rn.phone.value;
+
+          /*
+
+        const firstName = document.forms["rn"]["firstName"].value;
+        const lastName = document.forms["rn"]["lastName"].value;
+        const email = document.forms["rn"]["email"].value;
+        const phone = document.forms["rn"]["phone"].value; */
+        const resultt = document.querySelector(".result");
+        let FormData = "";
+          // Form validation
+          if (firstName === "" || firstName.trim() === "") {
+            alert("FirstName is Required");
+          } else if (firstName.length < 3 || firstName.length > 15) {
+            alert("The first name too small , between 3 to 15");
+          } else {
+            alert("First name is valied");
+            FormData += firstName;
+          }
+          resultt.textContent  = FormData;
+
+          console.log(firstName, lastName, email, phone);
+        })
+      );
+    </script>
+  </body>
+</html>

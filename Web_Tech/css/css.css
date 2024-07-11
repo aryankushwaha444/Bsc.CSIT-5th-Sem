@@ -1,0 +1,63 @@
+   /*  body{
+        display: flex;
+         justify-content: center; 
+        align-items: center;
+        width: 100vh;
+        height: 100vh;
+    } 
+
+
+     p{
+      
+        color: rgb(224, 220, 214);
+        background-color: rgb(36, 26, 51);
+        font-size: large;
+        border: 6px red;
+        border-radius: 10px;
+    } 
+
+
+    p[class]
+    {
+        text-align: center;
+        color: rgb(220, 19, 52);
+        background-color: rgb(106, 30, 127);
+        border-radius: 6px;
+    }
+
+    h1[class]
+    {
+        text-align: center;
+        color: pink;
+        background-color: rgb(136, 196, 126);
+        border-radius: 5px;
+    }
+
+
+    h1[class="three"]
+    {
+        color: rgb(91, 61, 121);
+        
+    }  
+    
+
+     /* Space Selector ( ~ )    
+
+p[class ~="one"]{
+    color: rgb(92, 63, 130);
+    background-color: red;
+    text-decoration:underline;
+    border-radius: 7px;
+} 
+*/
+
+
+ /* Hyphen Selector  */
+
+h1[lang|="en"]
+{
+    color :rgb(192, 79, 98);
+    
+} 
+
+

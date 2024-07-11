@@ -1,0 +1,75 @@
+/* General styles */
+body {
+    margin: 20px;
+}
+
+h1, h2, h3 {
+    color: black;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+.hover:hover {
+    margin:10px;
+    padding:10px;
+    /* color: red; */
+   background-color:red;
+}
+
+.visited:visited {
+    color:red;
+}
+
+
+.active:active {
+    margin:10px;
+    padding:10px;
+    background-color :pink;
+}
+
+/* List styles */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+ol {
+    list-style-type: upper-roman;
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin: 5px 0;
+}
+
+/* Table styles */
+table {
+    width: 30%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f2f2f2;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+       // const con = confirm("Are you sure");
+       // console.log(confirm("Are you sure"));
+/*
+       const sathi = {
+        name : "Madhav",
+        age :22,
+
+        faculty:{
+            sem :5
+        }
+       }
+
+       console.log(sathi);
+
+       console.log(sathi.name);
+       console.log(sathi["name"]);
+       console.log(sathi["faculty"]);
+        console.log(sathi["faculty"]["sem"]);
+
+         // Modification / if not found key then added at the end
+       sathi.phone = 4347664;
+       console.log(sathi.phone);
+
+       sathi.faculty.credit = 60;
+       console.log(sathi.faculty.credit);
+
+      // Modification
+       sathi.name = "Aryal"
+       console.log(sathi.name);
+
+       console.log(sathi);
+
+       //delete key
+
+     delete sathi.faculty.credit;
+       console.log(sathi);
+
+       */
+
+
+
+       // Constructor Function for Person objects
+
+       function student (first , last , rollNo , age){
+        this.firstName = first;
+        this.lastname = last;
+        this.TU_rollNo = rollNo;
+        this.Age = age;
+       }
+
+       const register = new student("Amisha" , "Basnet" , "28903/78" , 20);
+       console.log(register);
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

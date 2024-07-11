@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="heading">This is my heading</div>
+    
+
+
+    <script>
+        const heading  = document.getElementById('heading');  // element
+        console.log(heading.textContent); // content
+        console.log(heading.nodeName); // tag name
+
+        // Change the background color of the heading
+        heading.style.backgroundColor = 'red';
+        heading.style.color = 'black';  // color change
+
+        // change the font size of the text
+        heading.style.fontSize = "30px";
+
+        const subHeading = document.createElement('div');
+        subHeading.classList.add("sub-Heading");
+
+        subHeading.setAttribute("id", "sub-heading");
+      
+
+        subHeading.textContent = "This is my sub Heading2";
+        subHeading.style.backgroundColor = "#eae";
+        subHeading.style.fontSize = "12px";
+        heading.appendChild(subHeading);
+
+      //  document.body.appendChild(subHeading);
+
+      // Task ... 1.) Create an element using js --> Add some font to the element , change the styles of the element such as background color , font and etc
+      // append the element to the dom (body) / other customer element
+
+
+
+    </script>
+</body>
+</html>

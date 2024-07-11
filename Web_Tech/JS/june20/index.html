@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <fieldset>
+         Simple Interest Calulator
+
+
+    <form name="calculate">
+        <label for="principle"> Principle</label>
+        <input type="numbner" name="principle" id="principle" /> <br />
+        <br />
+        <label for="time"> Time</label>
+        <input type="number" name="time" id="time" /> <br />
+        <br />
+        <label for="rate"> Rate</label>
+        <input type="number" name="rate" id="rate" /> <br />
+
+  
+        <!-- submit button -->
+        <button type="submit" class="btnsub">calculate</button>
+
+    </fieldset>
+
+
+
+
+        <script>
+
+            console.log(document.forms.calculate.addEventListener("submit" , function(e){
+                e.preventDefault();
+                console.log("Form has been Submitted");
+                const  Principle =parseFloat( document.calculate.Priciple.value);
+                const Time =parseFloat(document.calculate.Time.value);
+                const Rate =parseFloat( document.calculate.Rate.value);
+            const cal =  (Principle * Time * Rate) / 100
+                
+                /*
+        
+                const firstName = document.forms["rn"]["firstName"].value;
+                const lastName = document.forms["rn"]["lastName"].value;
+                const email = document.forms["rn"]["email"].value;
+                const phone = document.forms["rn"]["phone"].value; */
+        
+                // console.log(Principle , Time , Rate);
+                console.log(cal);
+        
+              }));
+
+        </script>
+    
+</body>
+</html>

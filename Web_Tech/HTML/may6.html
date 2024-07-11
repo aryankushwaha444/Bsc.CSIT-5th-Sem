@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>optgeoup</title>
+</head>
+<body>
+
+    <form action=" " method="get" enctype="multipart/form-data">
+    
+    <select name="country">
+        <option disabled="disabled">first</option>
+            <option value="nepal">Nepal</option>
+            <option value="nepal">Nepal</option>
+
+        </option>
+        <optgroup label="Second">
+            <option value="nepal">Nepal</option>
+            <option value="nepal">Nepal</option>
+            <option value="nepal">Nepal</option>
+        </optgroup>
+        
+
+        <input type="file" name="file">
+    </select>
+
+    <input type="hidden" name="hidden-file" value="1">
+
+    <button type="submit">submit</button>
+    <p id="test">hello2</p>
+    <input type="button" name="hello" value="hello" onclick="change()">
+
+
+    <script type="text/javascript">
+        function change()
+        {
+             document.getElementById("test").innerHTML="the content is changed";
+
+        }
+    </script>
+<!-- 
+    <input type="date" name="date" id="">
+    <input type="datetime" name="datetime" id=""> -->
+
+    Tel:<input type="tel" name="tel" id="">
+    <input type="color" name="color" id="">
+
+
+
+</form>
+    
+</body>
+</html>

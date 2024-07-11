@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      .result {
+        font-size: 1.7em;
+        margin-top: 25px;
+      }
+      button {
+        margin: 7px;
+      }
+
+      #result {
+        color: red;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <form id="calculatorForm" onsubmit="return false;">
+      <div>
+        <label for="number1">Number 1: </label>
+        <input type="number" id="number1" required />
+      </div>
+      <br />
+      <div>
+        <label for="number2">Number 2: </label>
+        <input type="number" id="number2" required />
+      </div>
+      <br />
+      <button type="button" onclick="calculate('add')">Add</button>
+      <button type="button" onclick="calculate('subtract')">Subtract</button>
+      <button type="button" onclick="calculate('multiply')">Multiply</button>
+      <button type="button" onclick="calculate('divide')">Divide</button>
+      <div class="result">Result: <span id="result"></span></div>
+    </form>
+
+    <script>
+      function calculate(operation) {
+        const number1 = parseFloat(document.getElementById("number1").value);
+        const number2 = parseFloat(document.getElementById("number2").value);
+        let result = 0;
+
+        if (isNaN(number1) || isNaN(number2)) {
+          document.getElementById("result").textContent =
+            "Please enter valid numbers";
+          return;
+        }
+
+        switch (operation) {         
+          case "add":
+            result = number1 + number2;
+            break;
+          case "subtract":
+            result = number1 - number2;
+            break;
+          case "multiply":
+            result = number1 * number2;
+            break;
+          case "divide":
+            if (number2 === 0) {
+              document.getElementById(
+                "result"
+              ).textContent = `Cannot divide by ${number2}`;
+              return;
+            }
+            result = number1 / number2;
+            break;
+        }
+
+        document.getElementById("result").textContent = ` ${result}`;
+      }
+    </script>
+  </body>
+</html>

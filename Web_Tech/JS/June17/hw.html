@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW</title>
+  </head>
+  <body>
+    <div id="div">Hello</div>
+
+
+    
+    <script>
+      // Task ... 1.) Create an element using js --> Add some font to the element , change the styles of the element such as background color , font and etc
+      // append the element to the dom (body) / other customer element
+
+      // Create a new element (e.g., a div)
+      const newElement = document.createElement("div");
+
+      // Add some text to the element
+      newElement.textContent = "Hello, this is a dynamically created element!";
+
+      // Style the element
+      newElement.style.backgroundColor = "#f0f0f0"; // Background color
+      newElement.style.color = "#333"; // Text color
+      newElement.style.padding = "20px"; // Padding
+      newElement.style.margin = "10px"; // Margin
+      newElement.style.borderRadius = "5px"; // Rounded corners
+      newElement.style.fontFamily = "Arial, sans-serif"; // Font family
+      newElement.style.fontSize = "18px"; // Font size
+      newElement.style.textAlign = "center"; // Text alignment
+      newElement.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";  // Box shadow
+
+      // Append the element to the body
+      document.body.appendChild(newElement);
+
+      const newElement2 = document.createElement('div');
+
+      newElement2.textContent = 'Hello, this is a dynamically2 created element!';
+      document.body.appendChild(newElement2);
+
+
+
+    </script>
+  </body>
+</html>

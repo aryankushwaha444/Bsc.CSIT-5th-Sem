@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Interest Calculator</title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Simple Interest Calculator</legend>
+
+      <form name="calculate">
+        <label for="principle">Principle:</label>
+        <input type="number" name="principle" id="principle" required />
+        <br /><br />
+
+        <label for="time">Time:</label>
+        <input type="number" name="time" id="time" required /> <br /><br />
+
+        <label for="rate">Rate:</label>
+        <input type="text" name="rate" id="rate" required /> <br /><br />
+
+        <button type="submit" class="btnsub">Calculate</button>
+      </form>
+    </fieldset>
+
+    <script>
+      document.forms.calculate.addEventListener("submit", function (e) {
+        e.preventDefault();
+        console.log("Form has been Submitted");
+
+        const principle = parseFloat(document.calculate.principle.value);
+        const time = parseFloat(document.calculate.time.value);
+        const rate = parseFloat(document.calculate.rate.value);
+
+        if (!isNaN(principle) && !isNaN(time) && !isNaN(rate)) {
+          const interest = (principle * time * rate) / 100;
+          console.log("Calculated Interest:", interest);
+          alert("Calculated Interest: " + interest);
+          const sm = interest + principle;
+
+          const el = document.createElement("div");
+          el.textContent = sm;
+
+          document.body.appendChild(el);
+        } else {
+          console.log("Please enter valid numbers for all fields.");
+          alert("Please enter valid numbers for all fields.");
+        }
+      });
+    </script>
+  </body>
+</html>

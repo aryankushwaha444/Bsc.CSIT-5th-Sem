@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .c {
+        color: red;
+      }
+      .toggle-password {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form name="registration">
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" />
+      <div class="usernameerror c"></div>
+      <br />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <span
+        class="toggle-password"
+        onclick="togglePasswordVisibility('password')"
+        >👁️</span
+      >
+      <div class="passworderror c"></div>
+      <br />
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" name="confirmPassword" id="confirmPassword" />
+      <span
+        class="toggle-password"
+        onclick="togglePasswordVisibility('confirmPassword')"
+        >👁️</span
+      >
+      <div class="confirmPassworderror c"></div>
+      <br />
+
+      <!-- submit button -->
+      <button type="submit" class="btnsub" >Register</button>
+    </form>
+
+    <script>
+      function togglePasswordVisibility(fieldId) {
+        const field = document.getElementById(fieldId);
+        const type =
+          field.getAttribute("type") === "password" ? "text" : "password";
+        field.setAttribute("type", type);
+      }
+
+      document.forms.registration.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const username = document.forms.registration.username.value;
+        const password = document.forms.registration.password.value;
+        const confirmPassword =
+          document.forms.registration.confirmPassword.value;
+
+        let isValid = true;
+
+        // Username validation
+        if (username === "" || username.trim() === "") {
+          document.querySelector(".usernameerror").textContent =
+            "Username is required";
+          isValid = false;
+        } else if (username.length < 3 || username.length > 15) {
+          document.querySelector(".usernameerror").textContent =
+            "Username should be between 3 to 15 characters";
+          isValid = false;
+        } else if (!/^[A-Za-z]+$/.test(username)) {
+          document.querySelector(".usernameerror").textContent =
+            "Username must be characters only";
+          isValid = false;
+        }
+
+        // Password validation
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{10,}$/;
+        if (password === "" || password.trim() === "") {
+          document.querySelector(".passworderror").textContent =
+            "Password is required";
+          isValid = false;
+        } else if (!passwordPattern.test(password)) {
+          document.querySelector(".passworderror").textContent =
+            "Password must be at least 10 characters long, contain uppercase and lowercase letters, and include a special character";
+          isValid = false;
+        }
+
+        // Confirm password validation
+        if (confirmPassword !== password) {
+          document.querySelector(".confirmPassworderror").textContent =
+            "Passwords do not match";
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("Registration successful!");
+          console.log(`Username = ${username}`);
+          console.log(`Password = ${password}`);
+          // Perform further actions, such as submitting the form data to the server
+        }
+      });
+    </script>
+  </body>
+</html>

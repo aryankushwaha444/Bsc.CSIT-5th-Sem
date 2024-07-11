@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .hi{
+        background-color:red;
+
+    }
+  </style>
+  <body>
+    <button class="hi-btn">Say Hi</button>
+    <p class="hi"></p>
+
+    <script>
+      const hiBtn = document.querySelector(".hi-btn");
+    hiBtn.addEventListener("click", function () {
+        console.log("Hi!");
+         document.querySelector(".hi").textContent = "hiiii!";
+        const el = document.createElement("p");
+        el.classList.add("hi"); 
+         // el.setAttribute("class","hi");
+        el.textContent = "Hi!";
+        document.body.appendChild(el);
+        
+      });
+
+      /*
+
+      hiBtn.addEventListener("mouseover" , function()
+      {
+        hiBtn.style.backgroundColor = "red";
+
+
+
+      });
+
+      hiBtn.addEventListener("mouseout" , function()
+      {
+        hiBtn.style.backgroundColor = "blue";
+      }); 
+ 
+      document.addEventListener("keypress" , function(e)
+      {
+        console.log(e.key);
+        if(e.key === "f"){
+            console.log("You have enter F");
+        }
+
+      })  */
+
+      // HW
+      //keyup , keydown , mouseup , mousedown
+
+/*
+      hiBtn.addEventListener("keyup" , function()
+      {
+        hiBtn.style.backgroundColor = "pink";
+        alert("KeyUp");
+        console.log("keyUp");
+
+      });
+      
+      hiBtn.addEventListener("keydown" , function()
+      {
+        hiBtn.style.backgroundColor = "black";
+        alert("KeyDown");
+        console.log("keyDown");
+      });
+
+      
+
+      hiBtn.addEventListener("mouseup" , function()
+      {
+        hiBtn.style.backgroundColor = "blue";
+        console.log("mouseUp");
+        // alert("mouseUp");
+      });
+
+
+      hiBtn.addEventListener("mousedown" , function()
+      {
+        hiBtn.style.backgroundColor = "red";
+        console.log("mouseDown");
+        // alert("mouseDown");
+      });
+*/
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <p>Click me</p>
+    <p class="showMe" style="display:none">Show me!</p>
+
+    <script>
+        $(document).ready(function(){
+          //  console.log($("p"));
+          $("p").on("click",function(){
+          //  $("p").hide();
+
+          $(".showMe").show();
+
+
+          });
+
+          $("p").on("mouseenter",function(){
+              $("p").hide();
+  
+            $(".showMe").show();
+            //alert("mouseenter")
+  
+  
+            });
+
+
+        });
+
+        // Shorthand for document ready
+
+       // $(function(){
+
+        //s})
+
+        
+    </script>
+    
+</body>
+</html>

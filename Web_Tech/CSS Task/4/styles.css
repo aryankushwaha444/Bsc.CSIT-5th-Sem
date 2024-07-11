@@ -1,0 +1,69 @@
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Type Selector */
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Child Selector */
+div > p {
+    color: blue;
+}
+
+/* Pseudo-element for the first letter of each paragraph */
+p::first-letter {
+    font-size: 300%;
+    color: green;
+}
+
+/* Attribute Selector */
+/* a[target="_blank"] {
+    color: red;
+    text-decoration: underline;
+} */
+
+/* Descendant Selector */
+div p {
+    background-color: lightyellow;
+}
+
+/* Adjacent Sibling Selector */
+div.adjacent-sibling + p {
+    color: purple;
+    font-weight: bold;
+}
+
+/* Pseudo-classes */
+
+
+/* Hover effect for links */
+a:hover {
+    color: orange;
+}
+
+/* Style for the first child of any type within its parent */
+p:first-child {
+    border-bottom: 2px solid black;
+}
+
+/* Style for the last child of any type within its parent */
+p:last-child {
+    border-top: 2px solid black;
+}
+
+/* Style for every even paragraph */
+p:nth-of-type(even) {
+    background-color: lightblue;
+}
+
+/* Style for every odd paragraph */
+p:nth-of-type(odd) {
+    background-color: lightgreen;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Name Fields</title>
+    <style>
+      #formError {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="nameForm">
+      <div class="nameField" id="nameFields">
+        <label for="name0">Name 1: </label>
+        <input type="text" id="name0" name="names[]" required />
+      </div>
+      <br />
+
+      <button type="button" onclick="addNameField()">+ Add</button>
+      <br /><br />
+      <button type="submit">Submit</button>
+      <p id="formError" class="error">All name fields must be filled out.</p>
+    </form>
+
+    <script>
+      let nameFieldCount = 1;
+
+      function addNameField() {
+        const nameFieldsDiv = document.getElementById("nameFields");
+
+        const newFieldDiv = document.createElement("div");
+        newFieldDiv.classList.add("nameField");
+
+        const newLabel = document.createElement("label");
+        newLabel.setAttribute("for", `name${nameFieldCount}`);
+        newLabel.innerText = `Name ${nameFieldCount + 1}:`;
+
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.id = `name${nameFieldCount}`;
+        newInput.name = "names[]";
+        newInput.required = true;
+
+        newFieldDiv.appendChild(newLabel);
+        newFieldDiv.appendChild(newInput);
+
+        nameFieldsDiv.appendChild(newFieldDiv);
+        nameFieldCount++;
+      }
+
+      document
+        .getElementById("nameForm")
+        .addEventListener("submit", function (event) {
+          let isValid = true;
+          const formError = document.getElementById("formError");
+          formError.textContent = "";
+          const nameFields = document.querySelectorAll(".nameField input");
+
+          nameFields.forEach((field) => {
+            if (!field.value.trim()) {
+              isValid = false;
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

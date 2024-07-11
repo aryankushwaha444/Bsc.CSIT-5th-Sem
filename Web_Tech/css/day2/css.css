@@ -1,0 +1,37 @@
+h1{
+    margin: 10px;
+    padding: 8px;
+    /* width: 4px; */
+    background-color:bisque;
+    text-align: center;
+    font-size:xx-large;
+    text-decoration:underline;
+    text-decoration-color: red;
+    display: inline;
+
+
+}
+
+span{
+    display: block;
+    margin: 13px;
+    padding: 8px;
+    /* width: 4px; */
+    background-color:bisque;
+    text-align:right;
+    font-size:xx-large;
+    text-decoration:underline;
+    text-decoration-color: red;
+
+
+}
+
+
+.lorem{
+    /* display: none; */
+}
+
+.main1{
+    border: 4px dashed red;
+}
+
